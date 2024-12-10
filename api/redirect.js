@@ -14,7 +14,7 @@ export default function handler(req, res) {
     // Redirection logic
     if (utmCampaign === 'l1') {
       // UTM campaign 'l1' takes priority for both desktop and mobile
-      res.writeHead(302, { Location: blackPageURL });
+      res.writeHead(302, { Location: whitePageURL });
     } else if (isMobileDevice) {
       // Mobile devices without 'l1' campaign
       res.writeHead(302, { Location: blackPageURL });
